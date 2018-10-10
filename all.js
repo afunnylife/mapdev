@@ -37,7 +37,7 @@ var markers = [];
 
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 15,
+        zoom: 16,
         center: new google.maps.LatLng(25.0113176,121.5319803),
         mapTypeId: google.maps.MapTypeId.ROADMAP
     });
@@ -45,8 +45,12 @@ function initMap() {
 
 
     var icon = {
-        url: 'https://scontent.ftpe8-1.fna.fbcdn.net/v/t1.0-9/11709845_10207068161571140_4922252261826117643_n.jpg?_nc_cat=108&oh=d7d77b063969f61c36d8494c07999e00&oe=5C5DFB03', // url
-        scaledSize: new google.maps.Size(60, 50), // scaled size
+        //url: 'https://scontent.ftpe8-1.fna.fbcdn.net/v/t1.0-9/11709845_10207068161571140_4922252261826117643_n.jpg?_nc_cat=108&oh=d7d77b063969f61c36d8494c07999e00&oe=5C5DFB03', // url
+        //url:"https://media.giphy.com/media/2jL5Yh4ORyTEO0I1EQ/giphy.gif",
+        
+        url: 'https://media.giphy.com/media/5SCTfnWDiQ3Yal9QXy/giphy.gif', // url
+        
+        scaledSize: new google.maps.Size(80, 80), // scaled size
         origin: new google.maps.Point(0,0), // origin
         anchor: new google.maps.Point(0, 0) // anchor
     };
