@@ -26,27 +26,27 @@
 
 
 var locations = [
-    ['Bondi Beach', -33.890542, 151.274856, 4, 'http://www.google.com'],
-    ['Coogee Beach', -33.923036, 151.259052, 5, 'http://microsoft.com'],
-    ['Cronulla Beach', -34.028249, 151.157507, 3, 'http://www.apple.com'],
-    ['Manly Beach', -33.80010128657071, 151.28747820854187, 2, 'http://www.facebook.com'],
-    ['Maroubra Beach', -33.950198, 151.259302, 1, 'http://www.twitter.com']
+    ['Bondi Beach', 25.0113176,121.5319803, 4, 'http://www.google.com'],
+    ['Coogee Beach', 25.0112895,121.5290922, 5, 'http://microsoft.com'],
+    ['Cronulla Beach', 25.0084769,121.5325831, 3, 'http://www.apple.com'],
+   // ['Manly Beach', 25.0113176,121.5319803, 2, 'http://www.facebook.com'],
+   // ['Maroubra Beach', 25.0113140,121.5319850, 1, 'http://www.twitter.com']
 ];
 var map;
 var markers = [];
 
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 10,
-        center: new google.maps.LatLng(-33.92, 151.25),
+        zoom: 15,
+        center: new google.maps.LatLng(25.0113176,121.5319803),
         mapTypeId: google.maps.MapTypeId.ROADMAP
     });
 
 
 
     var icon = {
-        url: 'https://brandmark.io/logo-rank/random/mcdonalds.png', // url
-        scaledSize: new google.maps.Size(50, 50), // scaled size
+        url: 'https://scontent.ftpe8-1.fna.fbcdn.net/v/t1.0-9/11709845_10207068161571140_4922252261826117643_n.jpg?_nc_cat=108&oh=d7d77b063969f61c36d8494c07999e00&oe=5C5DFB03', // url
+        scaledSize: new google.maps.Size(60, 50), // scaled size
         origin: new google.maps.Point(0,0), // origin
         anchor: new google.maps.Point(0, 0) // anchor
     };
@@ -71,17 +71,13 @@ function initMap() {
         google.maps.event.addListener(markers[i], 'click', function() {
             //window.location.href = this.url;
             //console.log(this.url)
-    var marker = this
+            var marker = this
 
-    if(marker.getAnimation()==null){
-      marker.setAnimation(google.maps.Animation.BOUNCE);
-    }else{
-      marker.setAnimation(null);
-    }
-
-
-
-
+            if(marker.getAnimation()==null){
+              marker.setAnimation(google.maps.Animation.BOUNCE);
+            }else{
+              marker.setAnimation(null);
+            }
         });
 
         //console.log(markers[i].url);
